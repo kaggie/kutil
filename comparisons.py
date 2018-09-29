@@ -1,4 +1,4 @@
-def pathcompare(path1 = './', path2='git/'):
+def compare_path_files(path1 = './', path2='git/'):
     import glob
     import filecmp
     files1 = glob.glob(path1+'*')
