@@ -45,6 +45,8 @@ def compare_file_text(file1 = '1.txt', file2= '2.txt'):
     new_lines_all1 = {}
     new_lines_all2 = []
     new_lines_all2 = {}
+    if len(lines1) != len(lines2):
+        print('Watch out for extra lines not being returned')
     for count in range(min(len(lines1), len(lines2))):
         xi = xi+1
         yi = yi+1    
