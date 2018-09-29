@@ -93,3 +93,21 @@ def compare_file_text(file1 = '1.txt', file2= '2.txt'):
     return equal_lines, new_lines_all1, new_lines_all2
     #print(xi, yi)    
         
+        
+def combine_file_text(file1='1.txt', file2='2.txt'):
+    equal_lines, new_lines_all1, new_lines_all2 = compare_file_text(file1, file2)
+    out_text = ''
+    full_text = equal_lines
+    for key in new_lines_all2:
+        full_text[key] = new_lines_all2[key]
+    for key in new_lines_all1:
+        full_text[key] = new_lines_all1[key]    
+    for key in sorted(full_text.keys()):
+        if isinstance(full_text[key], (list, tuple)):
+            for item in full_text[key]:
+                out_text += item
+                #print(item,end='')
+        else:
+            out_text = full_text[key]
+            #print(full_text[key],end='')    
+    return out_text        
