@@ -108,6 +108,6 @@ def combine_file_text(file1='1.txt', file2='2.txt'):
                 out_text += item
                 #print(item,end='')
         else:
-            out_text = full_text[key]
+            out_text += full_text[key]
             #print(full_text[key],end='')    
     return out_text        
