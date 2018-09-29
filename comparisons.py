@@ -25,7 +25,7 @@ def compare_path_files(path1 = './', path2='git/'):
     
 ## compare two text files.  returns line by line analysi
 def compare_file_text(file1 = '1.txt', file2= '2.txt'):
-    import numpy as np
+    import numpy as np  ##oh, my eyes!  real developers import within functions, unintentionally breaking tools for some
     with open(file1,'r') as f1:
         lines1 = f1.readlines()
 
