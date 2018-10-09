@@ -16,6 +16,11 @@ class prep():
             newdata = newdata[newdata[key] == keyvals[key]]
         self._temp_data = newdata
         return newdata
-    def get_stats(self,data = None):
+    def get_stats(self,data = None,niceprint=False):
         if data is None:
-            
+            data = self._temp_data
+        means = data['mean']
+        if niceprint:
+            print(str(np.mean(means)) + ' +/- '  + str(np.std(means)))
+            return 
+        return np.mean(means), np.std(means)
